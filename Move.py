@@ -9,3 +9,7 @@ class Move:
 
     def get_col(self) -> int:
         return self.col
+
+
+
+
