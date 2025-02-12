@@ -1,7 +1,9 @@
+import pygame
+
 WIDTH, HEIGHT = 800, 800
 FPS = 60
 
-import pygame
+
 class Game:
     def init(self):
         pygame.init()
