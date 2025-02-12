@@ -1,7 +1,7 @@
 
 class Player:
-    _name : str
-    _score : int
+    _name: str
+    _score: int
 
     def init(self, name):
         self._name = name
