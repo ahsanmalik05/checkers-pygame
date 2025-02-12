@@ -1,8 +1,8 @@
 class Move:
-
-    def init(self, row: int, col: int):
+    def __init__(self, player, board, row: int, col: int):
         self.row = row
         self.col = col
+        self.player = player
 
     def get_row(self) -> int:
         return self.row
@@ -10,6 +10,8 @@ class Move:
     def get_col(self) -> int:
         return self.col
 
+    def get_player(self):
+        return self.player
 
-
-
+    def __str__(self):
+        return f"{self.player.name} placed at ({self.row}, {self.col})"
