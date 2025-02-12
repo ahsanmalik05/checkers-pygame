@@ -5,7 +5,7 @@ FPS = 60
 
 
 class Game:
-    def init(self):
+    def __init__(self):
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("Checkers")
