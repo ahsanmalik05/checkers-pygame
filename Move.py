@@ -1,3 +1,4 @@
+from Player import Player
 class Move:
     def __init__(self, player, board, row: int, col: int):
         self.row = row
@@ -14,4 +15,4 @@ class Move:
         return self.player
 
     def __str__(self):
-        return f"{self.player.name} placed at ({self.row}, {self.col})"
+        return f"{self.player.getName()} placed at ({self.row}, {self.col})"
