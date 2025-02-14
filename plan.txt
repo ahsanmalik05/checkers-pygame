@@ -1,0 +1,8 @@
+Game clicks on tile -> Board ->
+Board rmrs tile with variable selected_tile
+and shows all legal moves for that tile
+
+If game clicks on random non possible move tile:
+    update selected_tile
+If game clicks on possible move for selected_tile:
+    make move, reset selected_tile

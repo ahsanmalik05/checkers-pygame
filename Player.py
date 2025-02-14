@@ -1,3 +1,5 @@
+from load_assets import *
+
 
 class Player:
     _name: str
