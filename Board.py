@@ -34,3 +34,36 @@ class Board:
 
 
 
+    def make_move(self, row, col) -> bool:
+        """
+        Assume selected tile is
+        return true if made
+        """
+        if self.selected_tile:
+            player = self.grid[self.selected_tile[0]][self.selected_tile[1]]
+            if (abs(self.selected_tile[0]-row)+abs(self.selected_tile[1]-col)) == 4:
+                self.grid[self.selected_tile[0]][self.selected_tile[1]] = 0
+
+                if (row > self.selected_tile[0],col > self.selected_tile[0]):
+                    self.grid[self.selected_tile[0]+1][self.selected_tile[1]+1] = 0
+
+                elif (row > self.selected_tile[0],col < self.selected_tile[0]):
+                    self.grid[self.selected_tile[0]+1][self.selected_tile[1]-1] = 0
+
+                elif (row < self.selected_tile[0],col > self.selected_tile[0]):
+                    self.grid[self.selected_tile[0]-1][self.selected_tile[1]+1] = 0
+
+                elif (row < self.selected_tile[0],col < self.selected_tile[0]):
+                    self.grid[self.selected_tile[0]-1][self.selected_tile[1]-1] = 0
+
+            self.grid[self.selected_tile[0]][self.selected_tile[1]] = player
+
+            return True
+
+
+
+
+
+
+        pass
+
